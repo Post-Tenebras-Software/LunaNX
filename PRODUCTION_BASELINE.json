@@ -1,0 +1,16 @@
+{
+  "baseline": "1.0.1-id2",
+  "baselineNroSha256": "f6ef62ed223e712cfc938dfff16dab0c62141247d1cfa4cda61a21b12ec5ad7b",
+  "version": "1.0.1",
+  "changes": [
+    "Production launcher branches selected; client identity enabled",
+    "Unused console entry point and Fedora HTTP handoff helpers omitted",
+    "Only one production executable; no companion, auth-probe or diagnostic build targets",
+    "Original checkpoints retained in development workspace"
+  ],
+  "baselineInputs": {
+    "source/main.cpp": "a8903be3646cdffae549e2362aea854654a0c875676aa612b68b4edffad6689a",
+    "tools/luna-auth/native/main.cpp": "71e8b18603cc35122fc8352054669a1097fc78c5b62737ae30e3090ef83c3146",
+    "CMakeLists.txt": "fab37faa113b409b4a80b4fc34914697b7589f2b159f907f5200d4992940d34e"
+  }
+}

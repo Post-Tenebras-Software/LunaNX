@@ -1,0 +1,65 @@
+[
+  {
+    "package": "libnx",
+    "file": "third_party/recipes/libnx/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/libnx/PKGBUILD",
+    "sha256": "dce0573ea685bf06177765adfef794b719ff97944af1f24a3c8eed4e12adb6e4",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-bzip2",
+    "file": "third_party/recipes/switch-bzip2/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/bzip2/PKGBUILD",
+    "sha256": "f769f9f48065b02ded77b8704e123e759942d90246c71c4478c5f41e26335811",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-curl",
+    "file": "third_party/recipes/switch-curl/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/curl/PKGBUILD",
+    "sha256": "4e649bcb1ffd8b15822144c9ea26680f668c425983732b779c98f8e48058ae65",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-dav1d",
+    "file": "third_party/recipes/switch-dav1d/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/dav1d/PKGBUILD",
+    "sha256": "df8bdaaa5e08b63bfa876dce314abff55fea77e946157e98d3551c797f84945d",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-ffmpeg",
+    "file": "third_party/recipes/switch-ffmpeg/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/ffmpeg/PKGBUILD",
+    "sha256": "513d1641b0165336bae9d09e70f014e906c6dcd4b1d385fb2a86927524a06efb",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-freetype",
+    "file": "third_party/recipes/switch-freetype/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/freetype/PKGBUILD",
+    "sha256": "9d69f28748d1efda0f112014c9e12458eb515c30cc0ed8293c191bd99dcdd341",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-harfbuzz",
+    "file": "third_party/recipes/switch-harfbuzz/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/harfbuzz/PKGBUILD",
+    "sha256": "e43c8103fc5c22fc9988fa50320c6500a6a2ffaadc3125006d92fd0ce9767b9d",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-libpng",
+    "file": "third_party/recipes/switch-libpng/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/libpng/PKGBUILD",
+    "sha256": "a0957d7ef3f80b5a5906f19c2ff1a0dcc3a365cf0e2fa3b2f832d5958fe548e1",
+    "retrieved": "2026-11-09"
+  },
+  {
+    "package": "switch-zlib",
+    "file": "third_party/recipes/switch-zlib/PKGBUILD",
+    "url": "https://raw.githubusercontent.com/devkitPro/pacman-packages/master/switch/zlib/PKGBUILD",
+    "sha256": "d081e7d1d4b4456989a4c78c90b41128654cf991e179e1384ab1aa46a4fd4c32",
+    "retrieved": "2026-11-09"
+  }
+]

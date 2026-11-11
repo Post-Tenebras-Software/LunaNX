@@ -1,0 +1,761 @@
+{
+  "scope": "Archived browser-source observations and synthetic serializer outputs; not authenticated native Luna validation.",
+  "inspectedDate": "2026-11-07",
+  "sources": [
+    {
+      "file": "public-initial_app-be2e8c93.js",
+      "url": "https://m.media-amazon.com/images/S/sash/$G5E5xHpTPFBk2u.js?name=initial_app-be2e8c93",
+      "bytes": 104585,
+      "sha256": "48e309908264038077e521a02d3e077c0538751f839dd148e312d7412fe070e4"
+    },
+    {
+      "file": "public-initial_app-dcab6fb1.js",
+      "url": "https://m.media-amazon.com/images/S/sash/hamKDigQQeBufM2.js?name=initial_app-dcab6fb1",
+      "bytes": 90974,
+      "sha256": "1fa6ad19c6f42c8b9fd424fced76a3217a4b5983ec3f404785fcd1a5dff7e567"
+    },
+    {
+      "file": "public-initial_app-ecbc9d4f.js",
+      "url": "https://m.media-amazon.com/images/S/sash/F4S4ZW1tAj4a55I.js?name=initial_app-ecbc9d4f",
+      "bytes": 138884,
+      "sha256": "449a473b948a7532060599e892c40a7e674b4f1c939bba68eff205a3d481749f"
+    },
+    {
+      "file": "public-resources.js",
+      "url": "https://m.media-amazon.com/images/S/sash/7F-THM$XQnVcMVu.js?name=resources",
+      "bytes": 110880,
+      "sha256": "3361e029955cb1fcd44bf0adbc9af44b3a0652a962e1d4878c830857ac7b555d"
+    },
+    {
+      "file": "public-vendor-536eaa00.js",
+      "url": "https://m.media-amazon.com/images/S/sash/MRUuTl9LUMIuPp4.js?name=vendor-536eaa00",
+      "bytes": 124687,
+      "sha256": "b5da4e1e7002695c1391df5b1c76722d9a5d4fc9efe7d0a0131f500915fe51a5"
+    },
+    {
+      "file": "public-vendor_amzn-22da1f62.js",
+      "url": "https://m.media-amazon.com/images/S/sash/NmHWqNGPtlOwVpb.js?name=vendor_amzn-22da1f62",
+      "bytes": 147173,
+      "sha256": "b946124a460cf55416cdffb0fad45cc30110c74f236d31545176690285da924d"
+    },
+    {
+      "file": "public-vendor_amzn-3496a929.js",
+      "url": "https://m.media-amazon.com/images/S/sash/njMlYmfSzfCTujo.js?name=vendor_amzn-3496a929",
+      "bytes": 146017,
+      "sha256": "5c0a2852c84bfa0049e63b7147c0fabecc0be507c42c3d894fe4fba8dd4ceca2"
+    },
+    {
+      "file": "public-vendor_amzn-42278a2c.js",
+      "url": "https://m.media-amazon.com/images/S/sash/1aujtZWiu2gBEFZ.js?name=vendor_amzn-42278a2c",
+      "bytes": 126179,
+      "sha256": "dd8c1ec51d4b8bd323545bcf54433d70804eff9b39f3bd808565b9d0db49a4d0"
+    },
+    {
+      "file": "public-vendor_amzn-ad53a8f1.js",
+      "url": "https://m.media-amazon.com/images/S/sash/0GjocRtGIzdWLcB.js?name=vendor_amzn-ad53a8f1",
+      "bytes": 57611,
+      "sha256": "31175f740725eca45ec0ab9b910b1a38c8198b0801d7d5352a6e9a15030ae99b"
+    },
+    {
+      "file": "public-vendor_amzn-fd88c28a.js",
+      "url": "https://m.media-amazon.com/images/S/sash/qsibzoHkoZ$NC2x.js?name=vendor_amzn-fd88c28a",
+      "bytes": 124839,
+      "sha256": "37c172914be86c549379c8a490bf3ba6e4001f284503ccf9ec83a02e03d9a090"
+    }
+  ],
+  "sourceModules": {
+    "1055": "public-initial_app-be2e8c93.js",
+    "4974": "public-initial_app-dcab6fb1.js",
+    "9555": "public-initial_app-dcab6fb1.js",
+    "14028": "public-initial_app-dcab6fb1.js",
+    "16527": "public-initial_app-ecbc9d4f.js",
+    "24147": "public-initial_app-ecbc9d4f.js",
+    "28056": "public-resources.js",
+    "29302": "public-vendor_amzn-fd88c28a.js",
+    "31164": "public-initial_app-be2e8c93.js",
+    "52026": "public-initial_app-be2e8c93.js",
+    "53671": "public-initial_app-ecbc9d4f.js",
+    "62176": "public-vendor_amzn-42278a2c.js",
+    "73518": "public-initial_app-dcab6fb1.js",
+    "74713": "public-initial_app-ecbc9d4f.js",
+    "83095": "public-initial_app-dcab6fb1.js",
+    "85978": "public-initial_app-ecbc9d4f.js",
+    "92587": "public-initial_app-ecbc9d4f.js",
+    "93943": "public-vendor_amzn-3496a929.js"
+  },
+  "oracle": {
+    "modules": [
+      65339,
+      75182,
+      87124,
+      11788,
+      29302,
+      85723,
+      93943
+    ],
+    "files": [
+      "public-vendor-536eaa00.js",
+      "public-vendor_amzn-ad53a8f1.js",
+      "public-vendor_amzn-22da1f62.js",
+      "public-vendor_amzn-fd88c28a.js",
+      "public-vendor_amzn-3496a929.js"
+    ]
+  },
+  "channels": {
+    "inputChannel": {
+      "ordered": false,
+      "maxRetransmits": 0
+    },
+    "clientMessageChannel": {
+      "ordered": true,
+      "maxRetransmits": null
+    }
+  },
+  "schemas": {
+    "proto.dcv.display.DisplaySessionConfiguration": [
+      {
+        "number": 1,
+        "getter": "getNegotiationId",
+        "writer": "writeUint64"
+      },
+      {
+        "number": 2,
+        "getter": "getCaptureResolution",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.display.DisplaySessionConfiguration.Display.Resolution.serializeBinaryToWriter"
+      },
+      {
+        "number": 3,
+        "getter": "getDisplay",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.display.DisplaySessionConfiguration.Display.serializeBinaryToWriter"
+      },
+      {
+        "number": 4,
+        "getter": "getCodecsList",
+        "writer": "writeRepeatedMessage",
+        "nestedWriter": "proto.dcv.display.DisplaySessionConfiguration.VideoCodec.serializeBinaryToWriter"
+      },
+      {
+        "number": 5,
+        "getter": "getFeaturesList",
+        "writer": "writeRepeatedString"
+      },
+      {
+        "number": 6,
+        "getter": "getMinBitsPerSecond",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 7,
+        "getter": "getMaxBitsPerSecond",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 8,
+        "getter": "getStartBitsPerSecond",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 9,
+        "getter": "getClampingMode",
+        "writer": "writeEnum"
+      }
+    ],
+    "proto.dcv.display.DisplaySessionConfiguration.Display": [
+      {
+        "number": 1,
+        "getter": "getResolution",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.display.DisplaySessionConfiguration.Display.Resolution.serializeBinaryToWriter"
+      },
+      {
+        "number": 2,
+        "getter": "getRefreshRate",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 3,
+        "getter": "getSafeZones",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.display.DisplaySessionConfiguration.Display.SafeZones.serializeBinaryToWriter"
+      }
+    ],
+    "proto.dcv.display.DisplaySessionConfiguration.Display.Resolution": [
+      {
+        "number": 1,
+        "getter": "getWidth",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 2,
+        "getter": "getHeight",
+        "writer": "writeUint32"
+      }
+    ],
+    "proto.dcv.display.DisplaySessionConfiguration.Display.SafeZones": [
+      {
+        "number": 1,
+        "getter": "getLeft",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 2,
+        "getter": "getRight",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 3,
+        "getter": "getTop",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 4,
+        "getter": "getBottom",
+        "writer": "writeUint32"
+      }
+    ],
+    "proto.dcv.display.DisplaySessionConfiguration.VideoCodec": [
+      {
+        "number": 1,
+        "getter": "getVideoCodec",
+        "writer": "writeEnum"
+      },
+      {
+        "number": 2,
+        "getter": "getProfile",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 3,
+        "getter": "getLevel",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 4,
+        "getter": "getTier",
+        "writer": "writeEnum"
+      },
+      {
+        "number": 5,
+        "getter": "getMaxReferenceFramesNum",
+        "writer": "writeUint32"
+      }
+    ],
+    "proto.dcv.webrtc.CloseConnectionRequest": [
+      {
+        "number": 1,
+        "getter": "getSessionId",
+        "writer": "writeString"
+      },
+      {
+        "number": 2,
+        "getter": "getConnectionId",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 3,
+        "getter": "getClosingReason",
+        "writer": "writeEnum"
+      }
+    ],
+    "proto.dcv.webrtc.ResetIdleTimeoutRequest": [],
+    "proto.dcv.webrtc.AckCloseConnectionRequest": [],
+    "proto.dcv.webrtc.IdleTimeoutWarningRequest": [
+      {
+        "number": 1,
+        "getter": "getConnectionId",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 2,
+        "getter": "getWarnTime",
+        "writer": "writeUint32"
+      }
+    ],
+    "proto.dcv.webrtc.Ping": [
+      {
+        "number": 1,
+        "getter": "getClientSendTimestampMs",
+        "writer": "writeInt64"
+      },
+      {
+        "number": 2,
+        "getter": "getServerReceiveTimestampMs",
+        "writer": "writeInt64"
+      },
+      {
+        "number": 3,
+        "getter": "getServerSendTimestampMs",
+        "writer": "writeInt64"
+      }
+    ],
+    "proto.dcv.webrtc.FeatureConfigurationRequest": [
+      {
+        "number": 1,
+        "getter": "getFeaturesList",
+        "writer": "writeRepeatedString"
+      }
+    ],
+    "proto.dcv.webrtc.ClientContext": [
+      {
+        "number": 1,
+        "getter": "getBrowserMetadata",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.ClientContext.BrowserMetadata.serializeBinaryToWriter"
+      }
+    ],
+    "proto.dcv.webrtc.ClientContext.BrowserMetadata": [
+      {
+        "number": 1,
+        "getter": "getBrowserType",
+        "writer": "writeString"
+      },
+      {
+        "number": 2,
+        "getter": "getBrowserVersion",
+        "writer": "writeString"
+      },
+      {
+        "number": 3,
+        "getter": "getDeviceModel",
+        "writer": "writeString"
+      },
+      {
+        "number": 4,
+        "getter": "getDeviceType",
+        "writer": "writeString"
+      },
+      {
+        "number": 5,
+        "getter": "getOsName",
+        "writer": "writeString"
+      },
+      {
+        "number": 6,
+        "getter": "getOsVersion",
+        "writer": "writeString"
+      }
+    ],
+    "proto.dcv.webrtc.BrowserClientMessage": [
+      {
+        "number": 2,
+        "getter": "getProfilingMarkerIdentifer",
+        "writer": "writeUint32"
+      },
+      {
+        "number": 10,
+        "getter": "getCloseConnectionRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.CloseConnectionRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 11,
+        "getter": "getIdleTimeoutWarningRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.IdleTimeoutWarningRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 12,
+        "getter": "getResetIdleTimeoutRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.ResetIdleTimeoutRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 13,
+        "getter": "getAckCloseConnectionRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.AckCloseConnectionRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 20,
+        "getter": "getPing",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.Ping.serializeBinaryToWriter"
+      },
+      {
+        "number": 30,
+        "getter": "getFeatureConfigurationRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.FeatureConfigurationRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 40,
+        "getter": "getDisplaySessionConfiguration",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.display.DisplaySessionConfiguration.serializeBinaryToWriter"
+      },
+      {
+        "number": 41,
+        "getter": "getClientDisplaySessionConfiguration",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.ClientDisplaySessionConfiguration.serializeBinaryToWriter"
+      },
+      {
+        "number": 42,
+        "getter": "getClientContext",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.ClientContext.serializeBinaryToWriter"
+      },
+      {
+        "number": 43,
+        "getter": "getFrameSourceChangedEvent",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.FrameSourceChangedEvent.serializeBinaryToWriter"
+      },
+      {
+        "number": 50,
+        "getter": "getShowVirtualKeyboardRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.input.ShowVirtualKeyboardRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 51,
+        "getter": "getSetVirtualCursorModeStateRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.input.SetVirtualCursorModeStateRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 52,
+        "getter": "getOpenUrlRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.input.OpenUrlRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 53,
+        "getter": "getShowTextEntryRequest",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.input.ShowTextEntryRequest.serializeBinaryToWriter"
+      },
+      {
+        "number": 54,
+        "getter": "getShowTextEntryResponse",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.input.ShowTextEntryResponse.serializeBinaryToWriter"
+      },
+      {
+        "number": 60,
+        "getter": "getParticipantClientMessage",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.participant.ClientMessage.serializeBinaryToWriter"
+      },
+      {
+        "number": 61,
+        "getter": "getParticipantServerMessage",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.participant.ServerMessage.serializeBinaryToWriter"
+      },
+      {
+        "number": 70,
+        "getter": "getClientToApplicationMessage",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.ClientToApplicationMessage.serializeBinaryToWriter"
+      },
+      {
+        "number": 71,
+        "getter": "getApplicationToClientMessage",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.webrtc.ApplicationToClientMessage.serializeBinaryToWriter"
+      },
+      {
+        "number": 100,
+        "getter": "getProfilingMarker",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.network.ProfilingMarker.serializeBinaryToWriter"
+      },
+      {
+        "number": 110,
+        "getter": "getTil",
+        "writer": "writeMessage",
+        "nestedWriter": "proto.dcv.input.TempoInputLatency.serializeBinaryToWriter"
+      }
+    ]
+  },
+  "enums": {
+    "proto.dcv.display.DisplaySessionConfiguration.BitrateClampingMode": {
+      "CLAMP_TO_CAPTURE_RES": 0,
+      "NO_CLAMP": 1
+    },
+    "proto.dcv.display.DisplaySessionConfiguration.VideoCodec.Codec": {
+      "AVC": 0,
+      "HEVC": 1,
+      "AV1": 2
+    },
+    "proto.dcv.display.DisplaySessionConfiguration.VideoCodec.Tier": {
+      "TIER_MAIN": 0,
+      "TIER_HIGH": 1
+    },
+    "proto.dcv.webrtc.CloseConnectionRequest.ClosingReason": {
+      "NO_CLOSING_ERROR": 0,
+      "GENERIC_ERROR": 1,
+      "INTERNAL_SERVER_ERROR": 2,
+      "IDLE_TIMEOUT_EXPIRED": 3,
+      "PEER_CONNECTION_DISCONNECT": 4,
+      "TAKEOVER": 5,
+      "OWNER_LEFT": 6,
+      "KICKED": 7,
+      "SESSION_ENDED": 8,
+      "SESSION_PLAY_LIMIT_REACHED": 9,
+      "SESSION_CLOSED_UNKNOWN": 128,
+      "SESSION_CLOSED_GAME_EXIT": 129,
+      "SESSION_CLOSED_GAME_CRASH": 130,
+      "SESSION_CLOSED_NO_GAME_PROCESSES_DETECTED": 131,
+      "SESSION_CLOSED_NO_PRIMARY_GAME_PROCESS_DETECTED": 132,
+      "SESSION_CLOSED_WEBRTC_CRASH": 133,
+      "SESSION_CLOSED_GOLIVE_AGENT_TERMINATED": 134,
+      "SESSION_CLOSED_GOLIVE_AGENT_IDLE_TIMEOUT": 135,
+      "SESSION_CLOSED_BLOCKED_PROCESS_DETECTED": 136,
+      "SESSION_CLOSED_STARTUP_ERROR": 137,
+      "SESSION_CLOSED_USER_DATA_DOWNLOAD_FAILURE": 138,
+      "SESSION_CLOSED_GAME_LAUNCH_FAILURE": 139,
+      "SESSION_CLOSED_WATCHDOG_TERMINATED": 140,
+      "SESSION_CLOSED_OVERLAY_EXIT": 141,
+      "SESSION_CLOSED_CONCURRENCY_TAKEOVER": 142,
+      "SESSION_CLOSED_DCV_TERMINATING": 143,
+      "SESSION_CLOSED_OTHER": 144,
+      "SESSION_MAX_DURATION": 145,
+      "SIDECAR_CONTAINER_CRASHED": 146,
+      "SIDECAR_CONTAINER_LOST_CONNECTION": 147
+    },
+    "proto.dcv.webrtc.BrowserClientMessage.MsgCase": {
+      "MSG_NOT_SET": 0,
+      "CLOSE_CONNECTION_REQUEST": 10,
+      "IDLE_TIMEOUT_WARNING_REQUEST": 11,
+      "RESET_IDLE_TIMEOUT_REQUEST": 12,
+      "ACK_CLOSE_CONNECTION_REQUEST": 13,
+      "PING": 20,
+      "FEATURE_CONFIGURATION_REQUEST": 30,
+      "DISPLAY_SESSION_CONFIGURATION": 40,
+      "CLIENT_DISPLAY_SESSION_CONFIGURATION": 41,
+      "CLIENT_CONTEXT": 42,
+      "FRAME_SOURCE_CHANGED_EVENT": 43,
+      "SHOW_VIRTUAL_KEYBOARD_REQUEST": 50,
+      "SET_VIRTUAL_CURSOR_MODE_STATE_REQUEST": 51,
+      "OPEN_URL_REQUEST": 52,
+      "SHOW_TEXT_ENTRY_REQUEST": 53,
+      "SHOW_TEXT_ENTRY_RESPONSE": 54,
+      "PARTICIPANT_CLIENT_MESSAGE": 60,
+      "PARTICIPANT_SERVER_MESSAGE": 61,
+      "CLIENT_TO_APPLICATION_MESSAGE": 70,
+      "APPLICATION_TO_CLIENT_MESSAGE": 71,
+      "PROFILING_MARKER": 100,
+      "TIL": 110
+    }
+  },
+  "featureRequest": [
+    "server-reconfigure",
+    "client-display-config-flag"
+  ],
+  "displayDefaults": {
+    "negotiationId": 1,
+    "fallbackWidth": 1920,
+    "fallbackHeight": 1080,
+    "refreshRate": 60,
+    "avcProfile": 100,
+    "avcLevel": 42,
+    "maxReferenceFramesNum": 4,
+    "conditionalFeature": "dynamic-downsampling",
+    "bitrateBps": {
+      "limited": {
+        "min": 6000000,
+        "max": 11000000,
+        "start": 8000000
+      },
+      "standard": {
+        "min": 6000000,
+        "max": 24000000,
+        "start": 15000000
+      },
+      "enhanced": {
+        "min": 6000000,
+        "max": 30000000,
+        "start": 15000000
+      }
+    }
+  },
+  "timeSync": {
+    "units": "epoch milliseconds",
+    "initialOffset": 0,
+    "initialDelay": 999,
+    "initialSampleTime": 0,
+    "staleAfterMs": 1500000,
+    "initialOrStaleBurst": 8,
+    "burstSpacingMs": 1000,
+    "intervalMs": 60000,
+    "offsetFormula": "((serverReceive - clientSend) + (serverSend - clientReceive)) / 2",
+    "delayFormula": "(clientReceive - clientSend) - (serverSend - serverReceive)",
+    "syntheticExample": {
+      "clientSend": 1000,
+      "serverReceive": 1110,
+      "serverSend": 1120,
+      "clientReceive": 1030,
+      "offset": 100,
+      "delay": 20
+    }
+  },
+  "extendedOffer": {
+    "topLevelFields": [
+      "sdp",
+      "type",
+      "extras"
+    ],
+    "extrasFields": [
+      "features",
+      "clientContext",
+      "requestedChannels"
+    ],
+    "browserRequestedChannels": [
+      "display",
+      "audio",
+      "input",
+      "participant"
+    ],
+    "webControllerRequestedChannels": [
+      "input"
+    ],
+    "browserClientRole": "browser",
+    "featureSelection": "Only featureConfig entries with forwardToProtocol truthy; each becomes {name, value}"
+  },
+  "examples": [
+    {
+      "name": "initial-feature-request",
+      "kind": "feature",
+      "input": {
+        "features": [
+          "server-reconfigure",
+          "client-display-config-flag"
+        ]
+      },
+      "expectedHex": "f201300a127365727665722d7265636f6e6669677572650a1a636c69656e742d646973706c61792d636f6e6669672d666c6167",
+      "bytes": 51
+    },
+    {
+      "name": "empty-feature-request",
+      "kind": "feature",
+      "input": {
+        "features": []
+      },
+      "expectedHex": "f20100",
+      "bytes": 3
+    },
+    {
+      "name": "epoch-ping-request",
+      "kind": "ping",
+      "input": {
+        "clientSendTimestampMs": 1794000000123
+      },
+      "expectedHex": "a2010708fba8ee959b34",
+      "bytes": 10
+    },
+    {
+      "name": "synthetic-ping-response",
+      "kind": "ping",
+      "input": {
+        "clientSendTimestampMs": 1000,
+        "serverReceiveTimestampMs": 1110,
+        "serverSendTimestampMs": 1120
+      },
+      "expectedHex": "a2010908e80710d60818e008",
+      "bytes": 12
+    },
+    {
+      "name": "empty-client-context",
+      "kind": "context",
+      "input": {},
+      "expectedHex": "d202020a00",
+      "bytes": 5
+    },
+    {
+      "name": "synthetic-client-context",
+      "kind": "context",
+      "input": {
+        "browserType": "LunaNX",
+        "browserVersion": "0.1.0",
+        "deviceModel": "Nintendo Switch",
+        "deviceType": "console",
+        "osName": "Horizon",
+        "osVersion": "test"
+      },
+      "expectedHex": "d2023a0a380a064c756e614e581205302e312e301a0f4e696e74656e646f205377697463682207636f6e736f6c652a07486f72697a6f6e320474657374",
+      "bytes": 61
+    },
+    {
+      "name": "browser-default-display-example",
+      "kind": "display",
+      "input": {
+        "negotiationId": 1,
+        "width": 1920,
+        "height": 1080,
+        "refreshRate": 60,
+        "safeZones": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "codecs": [
+          {
+            "videoCodec": 0,
+            "profile": 100,
+            "level": 42,
+            "maxReferenceFramesNum": 4
+          }
+        ],
+        "features": [],
+        "minBitsPerSecond": 6000000,
+        "maxBitsPerSecond": 24000000,
+        "startBitsPerSecond": 15000000,
+        "clampingMode": 0
+      },
+      "expectedHex": "c2022708011a0c0a0608800f10b808103c1a0022061064182a280430809bee023880ecb80b40c0c39307",
+      "bytes": 42
+    },
+    {
+      "name": "display-dds-no-clamp-example",
+      "kind": "display",
+      "input": {
+        "negotiationId": 1,
+        "width": 1280,
+        "height": 720,
+        "refreshRate": 60,
+        "safeZones": {
+          "left": 1,
+          "right": 2,
+          "top": 3,
+          "bottom": 4
+        },
+        "codecs": [
+          {
+            "videoCodec": 0,
+            "profile": 100,
+            "level": 42,
+            "maxReferenceFramesNum": 4
+          }
+        ],
+        "features": [
+          "dynamic-downsampling"
+        ],
+        "minBitsPerSecond": 6000000,
+        "maxBitsPerSecond": 30000000,
+        "startBitsPerSecond": 15000000,
+        "clampingMode": 1
+      },
+      "expectedHex": "c2024708011a140a0608800a10d005103c1a08080110021803200422061064182a28042a1464796e616d69632d646f776e73616d706c696e6730809bee02388087a70e40c0c393074801",
+      "bytes": 74
+    },
+    {
+      "name": "ack-close-connection",
+      "kind": "ackClose",
+      "input": {},
+      "expectedHex": "6a00",
+      "bytes": 2
+    },
+    {
+      "name": "reset-idle-timeout",
+      "kind": "resetIdle",
+      "input": {},
+      "expectedHex": "6200",
+      "bytes": 2
+    }
+  ]
+}

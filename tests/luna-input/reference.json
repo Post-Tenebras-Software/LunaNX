@@ -1,0 +1,1862 @@
+{
+  "provenance": {
+    "description": "Offline outputs from Luna generated input writers; not live captures or server acceptance.",
+    "modules": [
+      65339,
+      75182,
+      87124
+    ],
+    "sources": [
+      {
+        "file": "public-vendor-536eaa00.js",
+        "url": "https://m.media-amazon.com/images/S/sash/MRUuTl9LUMIuPp4.js?name=vendor-536eaa00",
+        "sha256": "b5da4e1e7002695c1391df5b1c76722d9a5d4fc9efe7d0a0131f500915fe51a5"
+      },
+      {
+        "file": "public-vendor_amzn-ad53a8f1.js",
+        "url": "https://m.media-amazon.com/images/S/sash/0GjocRtGIzdWLcB.js?name=vendor_amzn-ad53a8f1",
+        "sha256": "31175f740725eca45ec0ab9b910b1a38c8198b0801d7d5352a6e9a15030ae99b"
+      },
+      {
+        "file": "public-vendor_amzn-22da1f62.js",
+        "url": "https://m.media-amazon.com/images/S/sash/NmHWqNGPtlOwVpb.js?name=vendor_amzn-22da1f62",
+        "sha256": "b946124a460cf55416cdffb0fad45cc30110c74f236d31545176690285da924d"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "pointer-mode-ack",
+      "kind": "ack",
+      "expectedHex": "a20200"
+    },
+    {
+      "name": "connect-default-empty-body",
+      "kind": "connection",
+      "deviceId": 0,
+      "connected": true,
+      "type": 0,
+      "resiliency": null,
+      "expectedHex": "ca0600"
+    },
+    {
+      "name": "disconnect-default",
+      "kind": "connection",
+      "deviceId": 0,
+      "connected": false,
+      "type": 0,
+      "resiliency": null,
+      "expectedHex": "ca06021001"
+    },
+    {
+      "name": "connect-ds4-device-3",
+      "kind": "connection",
+      "deviceId": 3,
+      "connected": true,
+      "type": 1,
+      "resiliency": null,
+      "expectedHex": "ca060408035001"
+    },
+    {
+      "name": "disconnect-max-device-id",
+      "kind": "connection",
+      "deviceId": 4294967295,
+      "connected": false,
+      "type": 0,
+      "resiliency": null,
+      "expectedHex": "ca060808ffffffff0f1001"
+    },
+    {
+      "name": "connect-present-empty-resiliency",
+      "kind": "connection",
+      "deviceId": 0,
+      "connected": true,
+      "type": 0,
+      "resiliency": {
+        "category": 0,
+        "eventId": 0,
+        "keyframeId": 0,
+        "terminalIdentifier": 0,
+        "retransmitCount": 0
+      },
+      "expectedHex": "0a00ca0600"
+    },
+    {
+      "name": "neutral",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "all-zero-scalars-present-empty-latency",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 0,
+        "leftY": 0,
+        "rightX": 0,
+        "rightY": 0,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 0,
+        "hardwareClass": 0
+      },
+      "resiliency": null,
+      "expectedHex": "c206026200"
+    },
+    {
+      "name": "negative-int64-timestamp",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": -1,
+        "hardwareClass": 4
+      },
+      "resiliency": null,
+      "expectedHex": "c2062a30ffff0138ffff0140ffff0148ffff01621808ffffffffffffffffff01180440ffffffffffffffffff01"
+    },
+    {
+      "name": "largest-exact-js-timestamp",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 9007199254740991,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062630ffff0138ffff0140ffff0148ffff01621408ffffffffffffff0f180b40ffffffffffffff0f"
+    },
+    {
+      "name": "signed-sensitivity-limits",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": -2147483648,
+        "rightSensitivity": 2147483647
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062e30ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b3468ffffffff0f70feffffff0f"
+    },
+    {
+      "name": "signed-sensitivity-unit",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": -1,
+        "rightSensitivity": 1
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062630ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b3468017002"
+    },
+    {
+      "name": "axis-trigger-extremes",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 128,
+        "rightTrigger": 255,
+        "leftX": 0,
+        "leftY": 65534,
+        "rightX": 16383,
+        "rightY": 49150,
+        "type": 1,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062520800128ff0138feff0340ff7f48feff025801621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "packet-varint-127",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 127,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624107f30ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "packet-varint-128",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 128,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062510800130ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "packet-varint-16383",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 16383,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062510ff7f30ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "packet-varint-16384",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 16384,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c206261080800130ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "packet-varint-4294967295",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 4294967295,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062810ffffffff0f30ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-1",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 1,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624180130ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-2",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 2,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624180230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-4",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 4,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624180430ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-8",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 8,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624180830ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-16",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 16,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624181030ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-32",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 32,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624182030ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-64",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 64,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20624184030ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-128",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 128,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062518800130ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-256",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 256,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062518800230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-512",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 512,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062518800430ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-4096",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 4096,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062518802030ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-8192",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 8192,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062518804030ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-16384",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 16384,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c206261880800130ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-32768",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 32768,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c206261880800230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "button-mask-65536",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 65536,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c206261880800430ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "all-button-bits",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 127999,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2062618ffe70730ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "present-empty-resiliency",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 0,
+        "eventId": 0,
+        "keyframeId": 0,
+        "terminalIdentifier": 0,
+        "retransmitCount": 0
+      },
+      "expectedHex": "0a00c2062230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "gamepad-resiliency-0",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 0,
+        "eventId": 4294967295,
+        "keyframeId": 128,
+        "terminalIdentifier": 16384,
+        "retransmitCount": 1
+      },
+      "expectedHex": "0a13a001ffffffff0ff0018001c002808001900301c2062230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "connection-resiliency-0",
+      "kind": "connection",
+      "deviceId": 0,
+      "connected": false,
+      "type": 0,
+      "resiliency": {
+        "category": 0,
+        "eventId": 4294967295,
+        "keyframeId": 128,
+        "terminalIdentifier": 16384,
+        "retransmitCount": 1
+      },
+      "expectedHex": "0a13a001ffffffff0ff0018001c002808001900301ca06021001"
+    },
+    {
+      "name": "gamepad-resiliency-1",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 1,
+        "eventId": 4294967295,
+        "keyframeId": 128,
+        "terminalIdentifier": 16384,
+        "retransmitCount": 1
+      },
+      "expectedHex": "0a155001a001ffffffff0ff0018001c002808001900301c2062230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "connection-resiliency-1",
+      "kind": "connection",
+      "deviceId": 0,
+      "connected": false,
+      "type": 0,
+      "resiliency": {
+        "category": 1,
+        "eventId": 4294967295,
+        "keyframeId": 128,
+        "terminalIdentifier": 16384,
+        "retransmitCount": 1
+      },
+      "expectedHex": "0a155001a001ffffffff0ff0018001c002808001900301ca06021001"
+    },
+    {
+      "name": "gamepad-resiliency-2",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 0,
+        "packetNumber": 0,
+        "buttons": 0,
+        "leftTrigger": 0,
+        "rightTrigger": 0,
+        "leftX": 32767,
+        "leftY": 32767,
+        "rightX": 32767,
+        "rightY": 32767,
+        "type": 0,
+        "leftSensitivity": 0,
+        "rightSensitivity": 0
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 4294967295,
+        "keyframeId": 128,
+        "terminalIdentifier": 16384,
+        "retransmitCount": 1
+      },
+      "expectedHex": "0a155002a001ffffffff0ff0018001c002808001900301c2062230ffff0138ffff0140ffff0148ffff01621008fba8ee959b34180b40fba8ee959b34"
+    },
+    {
+      "name": "connection-resiliency-2",
+      "kind": "connection",
+      "deviceId": 0,
+      "connected": false,
+      "type": 0,
+      "resiliency": {
+        "category": 2,
+        "eventId": 4294967295,
+        "keyframeId": 128,
+        "terminalIdentifier": 16384,
+        "retransmitCount": 1
+      },
+      "expectedHex": "0a155002a001ffffffff0ff0018001c002808001900301ca06021001"
+    },
+    {
+      "name": "mixed-0",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 3192574636,
+        "packetNumber": 1224224283,
+        "buttons": 65726,
+        "leftTrigger": 5,
+        "rightTrigger": 160,
+        "leftX": 31848,
+        "leftY": 61019,
+        "rightX": 15275,
+        "rightY": 43358,
+        "type": 1,
+        "leftSensitivity": -151780314,
+        "rightSensitivity": 1747995981
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064408aca5abf20b109bdce0c70418be8104200528a00130e8f80138dbdc0340ab7748ded2025801621008fba8ee959b34180b40fba8ee959b3468b3efdf9001709ab582830d"
+    },
+    {
+      "name": "mixed-1",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1026086187,
+        "packetNumber": 1839458446,
+        "buttons": 21141,
+        "leftTrigger": 240,
+        "rightTrigger": 143,
+        "leftX": 49768,
+        "leftY": 1561,
+        "rightX": 49438,
+        "rightY": 49747,
+        "type": 0,
+        "leftSensitivity": 1189710045,
+        "rightSensitivity": 1080554648
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 1,
+        "eventId": 1360478602,
+        "keyframeId": 87311201,
+        "terminalIdentifier": 3882353996,
+        "retransmitCount": 4081025083
+      },
+      "expectedHex": "0a1d5001a0018a83dd8805f001e186d129c002cc8aa0bb0e9003bb80fe990fc2064308abaaa3e903108ed18fed061895a50120f001288f0130e8840338990c409e820348d38403621008fba8ee959b34180b40fba8ee959b3468baa3ccee0870b0d2bf8608"
+    },
+    {
+      "name": "mixed-2",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1770190942,
+        "packetNumber": 137954341,
+        "buttons": 123712,
+        "leftTrigger": 159,
+        "rightTrigger": 114,
+        "leftX": 6056,
+        "leftY": 54370,
+        "rightX": 29663,
+        "rightY": 30671,
+        "type": 1,
+        "leftSensitivity": 2125344488,
+        "rightSensitivity": -1499478745
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064308def08bcc0610a588e44118c0c607209f01287230a82f38e2a80340dfe70148cfef015801621008fba8ee959b34180b40fba8ee959b3468d0bbf1ea0f70b1eb81960b"
+    },
+    {
+      "name": "mixed-3",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 86726069,
+        "packetNumber": 578120592,
+        "buttons": 49583,
+        "leftTrigger": 66,
+        "rightTrigger": 185,
+        "leftX": 14942,
+        "leftY": 22467,
+        "rightX": 57530,
+        "rightY": 2634,
+        "type": 0,
+        "leftSensitivity": -1729470665,
+        "rightSensitivity": -1364937942
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 3114108908,
+        "keyframeId": 3013796443,
+        "terminalIdentifier": 1556591614,
+        "retransmitCount": 404245317
+      },
+      "expectedHex": "0a1e5002a001ec8ff6cc0bf001dbc48b9d0bc002fee79ee6059003c596e1c001c2064008b5abad291090d7d5930218af8303204228b90130de7438c3af0140bac10348ca14621008fba8ee959b34180b40fba8ee959b34689183adf10c70abb3da950a"
+    },
+    {
+      "name": "mixed-4",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 2103788512,
+        "packetNumber": 2491327935,
+        "buttons": 28690,
+        "leftTrigger": 73,
+        "rightTrigger": 20,
+        "leftX": 43502,
+        "leftY": 44011,
+        "rightX": 11381,
+        "rightY": 80,
+        "type": 1,
+        "leftSensitivity": 1473829370,
+        "rightSensitivity": 1656070417
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064108e08795eb0710bfcbfaa3091892e0012049281430eed30238ebd70240f55848505801621008fba8ee959b34180b40fba8ee959b3468f4e7c6fd0a70a284adab0c"
+    },
+    {
+      "name": "mixed-5",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 313771471,
+        "packetNumber": 563575010,
+        "buttons": 8921,
+        "leftTrigger": 100,
+        "rightTrigger": 115,
+        "leftX": 11745,
+        "leftY": 9289,
+        "rightX": 55867,
+        "rightY": 65059,
+        "type": 0,
+        "leftSensitivity": -388309599,
+        "rightSensitivity": -392996212
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 666976158,
+        "keyframeId": 1996890725,
+        "terminalIdentifier": 357560448,
+        "retransmitCount": 2815502815
+      },
+      "expectedHex": "0a1e5002a0019eff84be02f001e5c498b807c00280e1bfaa019003dfd3c4be0ac2063f08cf8bcf950110e2f1dd8c0218d9452064287330e15b38c94840bbb40348a3fc03621008fba8ee959b34180b40fba8ee959b3468bd89a9f20270e795e5f602"
+    },
+    {
+      "name": "mixed-6",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 797175218,
+        "packetNumber": 1832448361,
+        "buttons": 948,
+        "leftTrigger": 131,
+        "rightTrigger": 6,
+        "leftX": 33886,
+        "leftY": 30671,
+        "rightX": 18830,
+        "rightY": 44983,
+        "type": 1,
+        "leftSensitivity": -210574884,
+        "rightSensitivity": 1841173387
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064408b2db8ffc0210e9e2e3e90618b407208301280630de880238cfef01408e930148b7df025801621008fba8ee959b34180b40fba8ee959b3468c7f8e8c8017096cef0db0d"
+    },
+    {
+      "name": "mixed-7",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1168352249,
+        "packetNumber": 4234444036,
+        "buttons": 57491,
+        "leftTrigger": 214,
+        "rightTrigger": 61,
+        "leftX": 17935,
+        "leftY": 14378,
+        "rightX": 28401,
+        "rightY": 31476,
+        "type": 0,
+        "leftSensitivity": 954062491,
+        "rightSensitivity": 2019007294
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 1,
+        "eventId": 3162500384,
+        "keyframeId": 4018716159,
+        "terminalIdentifier": 1878733650,
+        "retransmitCount": 94714505
+      },
+      "expectedHex": "0a1d5001a001a0daffe30bf001fffba2fc0ec002d2e6ecff06900389f5942dc2064208f9c78ead041084fa91e30f1893c10320d601283d308f8c0138aa7040f1dd0148f4f501621008fba8ee959b34180b40fba8ee959b3468b6daee8d0770fcecbc850f"
+    },
+    {
+      "name": "mixed-8",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 310805076,
+        "packetNumber": 2137328035,
+        "buttons": 25254,
+        "leftTrigger": 205,
+        "rightTrigger": 200,
+        "leftX": 9592,
+        "leftY": 31575,
+        "rightX": 54984,
+        "rightY": 47776,
+        "type": 1,
+        "leftSensitivity": -61991154,
+        "rightSensitivity": 1777578773
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064408d4849a940110a39394fb0718a6c50120cd0128c80130f84a38d7f60140c8ad0348a0f5025801621008fba8ee959b34180b40fba8ee959b3468e3a38f3b70aacc9d9f0d"
+    },
+    {
+      "name": "mixed-9",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1271575219,
+        "packetNumber": 1281906806,
+        "buttons": 29021,
+        "leftTrigger": 24,
+        "rightTrigger": 151,
+        "leftX": 63413,
+        "leftY": 59256,
+        "rightX": 65323,
+        "rightY": 4481,
+        "type": 0,
+        "leftSensitivity": 1496154277,
+        "rightSensitivity": 1964849600
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 1,
+        "eventId": 4200351986,
+        "keyframeId": 3620803497,
+        "terminalIdentifier": 1801668852,
+        "retransmitCount": 1600053187
+      },
+      "expectedHex": "0a1e5001a001f291f1d20ff001a9a7c4be0dc002f4918ddb069003c3bffbfa05c2064208b3e5aade0410f6b0a1e30418dde201201828970130b5ef0338f8ce0340abfe03488123621008fba8ee959b34180b40fba8ee959b3468ca82ec920b7080e7e9d10e"
+    },
+    {
+      "name": "mixed-10",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 3144876614,
+        "packetNumber": 3439588589,
+        "buttons": 119144,
+        "leftTrigger": 167,
+        "rightTrigger": 218,
+        "leftX": 23983,
+        "leftY": 21846,
+        "rightX": 9275,
+        "rightY": 43984,
+        "type": 1,
+        "leftSensitivity": 1956208144,
+        "rightSensitivity": 1933777455
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064508c684ccdb0b10ede98fe80c18e8a20720a70128da0130afbb0138d6aa0140bb4848d0d7025801621008fba8ee959b34180b40fba8ee959b3468a0f8cac90e70dee898b40e"
+    },
+    {
+      "name": "mixed-11",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1082497149,
+        "packetNumber": 2720956344,
+        "buttons": 46007,
+        "leftTrigger": 170,
+        "rightTrigger": 1,
+        "leftX": 1267,
+        "leftY": 36804,
+        "rightX": 43129,
+        "rightY": 55740,
+        "type": 0,
+        "leftSensitivity": 273094207,
+        "rightSensitivity": -1894830446
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 0,
+        "eventId": 2063753108,
+        "keyframeId": 3273049571,
+        "terminalIdentifier": 2325377510,
+        "retransmitCount": 4011745293
+      },
+      "expectedHex": "0a1ca00194bf89d807f001e38bdb980cc002e6e3e9d40890038dc0f9f80ec2064208fdb096840410b8ffb9910a18b7e70220aa01280130f30938c49f0240f9d00248bcb303621008fba8ee959b34180b40fba8ee959b3468fed8b8840270dbc5868f0e"
+    },
+    {
+      "name": "mixed-12",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 3699638792,
+        "packetNumber": 985284039,
+        "buttons": 24698,
+        "leftTrigger": 145,
+        "rightTrigger": 188,
+        "leftX": 4143,
+        "leftY": 49190,
+        "rightX": 33038,
+        "rightY": 6614,
+        "type": 1,
+        "leftSensitivity": -601895070,
+        "rightSensitivity": 1463781209
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064408888490e40d10c7fbe8d50318fac00120910128bc0130af2038a68003408e820248d6335801621008fba8ee959b34180b40fba8ee959b3468bbc281be0470b29dfcf30a"
+    },
+    {
+      "name": "mixed-13",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 2697297879,
+        "packetNumber": 2472876874,
+        "buttons": 53793,
+        "leftTrigger": 12,
+        "rightTrigger": 251,
+        "leftX": 28918,
+        "leftY": 41940,
+        "rightX": 2624,
+        "rightY": 10173,
+        "type": 0,
+        "leftSensitivity": 1653044713,
+        "rightSensitivity": -1173633484
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 1538306438,
+        "keyframeId": 2704890669,
+        "terminalIdentifier": 772899496,
+        "retransmitCount": 1338607079
+      },
+      "expectedHex": "0a1e5002a00186e3c2dd05f001adb6e5890ac002a885c6f0029003e78ba6fe04c2064108d7ff95860a10cab6949b0918a1a403200c28fb0130f6e10138d4c70240c01448bd4f621008fba8ee959b34180b40fba8ee959b3468d2d7bba80c7097e7a1df08"
+    },
+    {
+      "name": "mixed-14",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 2828257818,
+        "packetNumber": 1795199665,
+        "buttons": 122972,
+        "leftTrigger": 11,
+        "rightTrigger": 238,
+        "leftX": 31176,
+        "leftY": 18259,
+        "rightX": 24034,
+        "rightY": 47058,
+        "type": 1,
+        "leftSensitivity": -1736124540,
+        "rightSensitivity": -185565933
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20645089a94cfc40a10b1a582d80618dcc007200b28ee0130c8f30138d38e0140e2bb0148d2ef025801621008fba8ee959b34180b40fba8ee959b3468f7a1d9f70c70d98bfcb001"
+    },
+    {
+      "name": "mixed-15",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 4108891969,
+        "packetNumber": 1251813292,
+        "buttons": 29467,
+        "leftTrigger": 190,
+        "rightTrigger": 5,
+        "leftX": 34997,
+        "leftY": 13689,
+        "rightX": 1757,
+        "rightY": 45227,
+        "type": 0,
+        "leftSensitivity": 1541456419,
+        "rightSensitivity": 1771946278
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 1546539848,
+        "keyframeId": 2181029383,
+        "terminalIdentifier": 2006123450,
+        "retransmitCount": 1066155985
+      },
+      "expectedHex": "0a1e5002a001c8a6b9e105f00187bcff8f08c002ba87ccbc079003d1ffb0fc03c2064108c1eea2a70f10accff4d404189be60120be01280530b5910238f96a40dd0d48abe102621008fba8ee959b34180b40fba8ee959b3468c68886be0b70cc84ee990d"
+    },
+    {
+      "name": "mixed-16",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 2472834812,
+        "packetNumber": 1586325035,
+        "buttons": 82318,
+        "leftTrigger": 149,
+        "rightTrigger": 240,
+        "leftX": 39971,
+        "leftY": 60152,
+        "rightX": 40799,
+        "rightY": 24269,
+        "type": 1,
+        "leftSensitivity": 1409636086,
+        "rightSensitivity": 526410205
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064608fced919b0910abccb5f405188e830520950128f00130a3b80238f8d50340dfbe0248cdbd015801621008fba8ee959b34180b40fba8ee959b3468ecdbaac00a70ba8783f603"
+    },
+    {
+      "name": "mixed-17",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1913409851,
+        "packetNumber": 3727660382,
+        "buttons": 61733,
+        "leftTrigger": 64,
+        "rightTrigger": 159,
+        "leftX": 6805,
+        "leftY": 32709,
+        "rightX": 36977,
+        "rightY": 38470,
+        "type": 0,
+        "leftSensitivity": 277938541,
+        "rightSensitivity": -33393688
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 190188890,
+        "keyframeId": 1726577905,
+        "terminalIdentifier": 2979746204,
+        "retransmitCount": 470958155
+      },
+      "expectedHex": "0a1d5002a001da9ad85af001f1f9a5b706c0029ca3ed8c0b9003cb80c9e001c2064108bba2b1900710deaabef10d18a5e2032040289f0130953538c5ff0140f1a00248c6ac02621008fba8ee959b34180b40fba8ee959b3468da8588890270afb0ec1f"
+    },
+    {
+      "name": "mixed-18",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 911022382,
+        "packetNumber": 736071349,
+        "buttons": 20624,
+        "leftTrigger": 175,
+        "rightTrigger": 66,
+        "leftX": 35236,
+        "leftY": 45599,
+        "rightX": 57769,
+        "rightY": 51197,
+        "type": 1,
+        "leftSensitivity": 75874872,
+        "rightSensitivity": -1173086153
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064408aeb2b4b20310b59dfede021890a10120af01284230a49302389fe40240a9c30348fd8f035801621008fba8ee959b34180b40fba8ee959b3468f088ae487091ffdede08"
+    },
+    {
+      "name": "mixed-19",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 4273914949,
+        "packetNumber": 1494182112,
+        "buttons": 33471,
+        "leftTrigger": 18,
+        "rightTrigger": 73,
+        "leftX": 20554,
+        "leftY": 64614,
+        "rightX": 31746,
+        "rightY": 16875,
+        "type": 0,
+        "leftSensitivity": -167657913,
+        "rightSensitivity": 21292794
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 3716054076,
+        "keyframeId": 53946987,
+        "terminalIdentifier": 2241182926,
+        "retransmitCount": 509713877
+      },
+      "expectedHex": "0a1d5002a001bcf8f9eb0df001ebd4dc19c002cef9d6ac089003d5bb86f301c2064108c588fbf50f10e0d1bdc80518bf85022012284930caa00138e6f8034082f80148eb8301621008fba8ee959b34180b40fba8ee959b3468f186f29f0170f49ba714"
+    },
+    {
+      "name": "mixed-20",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 370398512,
+        "packetNumber": 336717519,
+        "buttons": 74210,
+        "leftTrigger": 217,
+        "rightTrigger": 100,
+        "leftX": 26284,
+        "leftY": 59546,
+        "rightX": 28553,
+        "rightY": 19952,
+        "type": 1,
+        "leftSensitivity": 469057994,
+        "rightSensitivity": -858536287
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064508b0aacfb00110cfcdc7a00118e2c30420d901286430accd01389ad1034089df0148f09b015801621008fba8ee959b34180b40fba8ee959b34689487aabf0370bde5e1b206"
+    },
+    {
+      "name": "mixed-21",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 188451551,
+        "packetNumber": 395369138,
+        "buttons": 62057,
+        "leftTrigger": 180,
+        "rightTrigger": 131,
+        "leftX": 10628,
+        "leftY": 8440,
+        "rightX": 17049,
+        "rightY": 33860,
+        "type": 0,
+        "leftSensitivity": 1262004017,
+        "rightSensitivity": -189401380
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 1,
+        "eventId": 4232523886,
+        "keyframeId": 605437173,
+        "terminalIdentifier": 3787893200,
+        "retransmitCount": 1887335151
+      },
+      "expectedHex": "0a1e5001a001eee09ce20ff001f5f9d8a002c002d0d39a8e0e9003efe5f98307c2064108df95ee5910b2b5c3bc0118e9e40320b40128830130845338f8414099850148c48802621008fba8ee959b34180b40fba8ee959b3468e29cc5b30970c7a4d0b401"
+    },
+    {
+      "name": "mixed-22",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 2382168962,
+        "packetNumber": 2573200633,
+        "buttons": 12804,
+        "leftTrigger": 147,
+        "rightTrigger": 214,
+        "leftX": 5906,
+        "leftY": 574,
+        "rightX": 19588,
+        "rightY": 31091,
+        "type": 1,
+        "leftSensitivity": -733097428,
+        "rightSensitivity": -1939069029
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c20643088287f4ef0810f9d9ffca0918846420930128d60130922e38be044084990148f3f2015801621008fba8ee959b34180b40fba8ee959b3468a7b791bb0570c9e19eb90e"
+    },
+    {
+      "name": "mixed-23",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 2610414473,
+        "packetNumber": 3010295636,
+        "buttons": 94883,
+        "leftTrigger": 166,
+        "rightTrigger": 205,
+        "leftX": 8995,
+        "leftY": 36231,
+        "rightX": 55168,
+        "rightY": 9484,
+        "type": 0,
+        "leftSensitivity": -1736364373,
+        "rightSensitivity": 38368270
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 3566390896,
+        "keyframeId": 2937327375,
+        "terminalIdentifier": 2531963170,
+        "retransmitCount": 3040837145
+      },
+      "expectedHex": "0a1e5002a001f09ccba40df0018f9ed0f80ac002a2e2aab709900399fcfda90bc20641088987dfdc0910d4eeb59b0b18a3e50520a60128cd0130a34638879b024080af03488c4a621008fba8ee959b34180b40fba8ee959b3468a9c5f6f70c709cd0cb24"
+    },
+    {
+      "name": "mixed-24",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 223826084,
+        "packetNumber": 2483250099,
+        "buttons": 86390,
+        "leftTrigger": 93,
+        "rightTrigger": 24,
+        "leftX": 19214,
+        "leftY": 11351,
+        "rightX": 63306,
+        "rightY": 12459,
+        "type": 1,
+        "leftSensitivity": -323394594,
+        "rightSensitivity": -531531355
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064108a4a1dd6a10b3c78da00918f6a205205d2818308e960138d75840caee0348ab615801621008fba8ee959b34180b40fba8ee959b3468c3f0b4b40270b599f4fa03"
+    },
+    {
+      "name": "mixed-25",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1250414787,
+        "packetNumber": 2240626502,
+        "buttons": 66029,
+        "leftTrigger": 104,
+        "rightTrigger": 167,
+        "leftX": 30210,
+        "leftY": 19359,
+        "rightX": 7134,
+        "rightY": 32385,
+        "type": 0,
+        "leftSensitivity": 1748446005,
+        "rightSensitivity": -1163902192
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 1,
+        "eventId": 783691458,
+        "keyframeId": 3275923257,
+        "terminalIdentifier": 1053998916,
+        "retransmitCount": 318489043
+      },
+      "expectedHex": "0a1e5001a001c2ddd8f502f001b9be8a9a0cc002c4fecaf6039003d383ef9701c2064208c3a19fd40410c6feb4ac0818ed8304206828a7013082ec01389f970140de374881fd01621008fba8ee959b34180b40fba8ee959b3468eaacb9830d70dff3fdd508"
+    },
+    {
+      "name": "mixed-26",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1879891222,
+        "packetNumber": 2756899197,
+        "buttons": 184,
+        "leftTrigger": 183,
+        "rightTrigger": 170,
+        "leftX": 1266,
+        "leftY": 18388,
+        "rightX": 2580,
+        "rightY": 25030,
+        "type": 1,
+        "leftSensitivity": 1386478432,
+        "rightSensitivity": 1363867455
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c206430896bab3800710fde2cba20a18b80120b70128aa0130f20938d48f0140941448c6c3015801621008fba8ee959b34180b40fba8ee959b3468c0ed9faa0a70fedcd7940a"
+    },
+    {
+      "name": "mixed-27",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 4255512845,
+        "packetNumber": 2438776584,
+        "buttons": 12999,
+        "leftTrigger": 122,
+        "rightTrigger": 145,
+        "leftX": 22946,
+        "leftY": 19863,
+        "rightX": 19247,
+        "rightY": 64136,
+        "type": 0,
+        "leftSensitivity": -824543409,
+        "rightSensitivity": 1875344482
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 1,
+        "eventId": 3324280292,
+        "keyframeId": 565587955,
+        "terminalIdentifier": 948253878,
+        "retransmitCount": 1408836765
+      },
+      "expectedHex": "0a1e5001a001e4fb91b10cf001f3dfd88d02c002b6e994c40390039dc9e49f05c20642088df297ed0f10888ef38a0918c765207a28910130a2b30138979b0140af96014888f503621008fba8ee959b34180b40fba8ee959b3468e1a2ac920670c4f1bbfc0d"
+    },
+    {
+      "name": "mixed-28",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1476484440,
+        "packetNumber": 1565114583,
+        "buttons": 24650,
+        "leftTrigger": 33,
+        "rightTrigger": 12,
+        "leftX": 20828,
+        "leftY": 43401,
+        "rightX": 43233,
+        "rightY": 51230,
+        "type": 1,
+        "leftSensitivity": 1757598002,
+        "rightSensitivity": -1685094679
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064408d8ba85c00510d781a7ea0518cac0012021280c30dca2013889d30240e1d102489e90035801621008fba8ee959b34180b40fba8ee959b3468e4c4968c0d70ad8484c70c"
+    },
+    {
+      "name": "mixed-29",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 274859751,
+        "packetNumber": 3434632986,
+        "buttons": 111537,
+        "leftTrigger": 92,
+        "rightTrigger": 11,
+        "leftX": 10803,
+        "leftY": 47095,
+        "rightX": 53615,
+        "rightY": 56202,
+        "type": 0,
+        "leftSensitivity": 919835001,
+        "rightSensitivity": -2047570812
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 0,
+        "eventId": 824204374,
+        "keyframeId": 2755913661,
+        "terminalIdentifier": 1135347192,
+        "retransmitCount": 3418624247
+      },
+      "expectedHex": "0a1ca001d6b8818903f001bdcf8fa20ac002f88bb09d049003f7a190de0cc2064108e78d888301109aaee1e50c18b1e706205c280b30b35438f7ef0240efa203488ab703621008fba8ee959b34180b40fba8ee959b3468f2c59ced0670f7cddba00f"
+    },
+    {
+      "name": "mixed-30",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 1548040682,
+        "packetNumber": 685776961,
+        "buttons": 94380,
+        "leftTrigger": 27,
+        "rightTrigger": 190,
+        "leftX": 54724,
+        "leftY": 25438,
+        "rightX": 20942,
+        "rightY": 16850,
+        "type": 1,
+        "leftSensitivity": -1218940460,
+        "rightSensitivity": -419744989
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": null,
+      "expectedHex": "c2064508eaf394e20510c1c080c70218ace105201b28be0130c4ab0338dec60140cea30148d283015801621008fba8ee959b34180b40fba8ee959b3468d7b8bc8a0970b9b3a69003"
+    },
+    {
+      "name": "mixed-31",
+      "kind": "gamepad",
+      "state": {
+        "deviceId": 4043434193,
+        "packetNumber": 4172549116,
+        "buttons": 127787,
+        "leftTrigger": 142,
+        "rightTrigger": 149,
+        "leftX": 1745,
+        "leftY": 13108,
+        "rightX": 41725,
+        "rightY": 47498,
+        "type": 0,
+        "leftSensitivity": -1131332557,
+        "rightSensitivity": -1899605002
+      },
+      "timing": {
+        "timestampMs": 1794000000123,
+        "hardwareClass": 11
+      },
+      "resiliency": {
+        "category": 2,
+        "eventId": 1178205848,
+        "keyframeId": 3316216087,
+        "terminalIdentifier": 3562527626,
+        "retransmitCount": 1993872737
+      },
+      "expectedHex": "0a1e5002a00198fde7b104f00197e2a5ad0cc0028ab7dfa20d9003e1aae0b607c2064208d1d187880f10fc97d0c50f18abe607208e0128950130d10d38b46640fdc502488af302621008fba8ee959b34180b40fba8ee959b3468998ff6b6087093b0cd930e"
+    }
+  ],
+  "axis": [
+    {
+      "value": -1,
+      "expected": 0
+    },
+    {
+      "value": -0.9999,
+      "expected": 3
+    },
+    {
+      "value": -0.5,
+      "expected": 16383
+    },
+    {
+      "value": -0.00003051850947599719,
+      "expected": 32766
+    },
+    {
+      "value": -0.000001,
+      "expected": 32766
+    },
+    {
+      "value": 0,
+      "expected": 32767
+    },
+    {
+      "value": 0.000001,
+      "expected": 32767
+    },
+    {
+      "value": 0.00003051850947599719,
+      "expected": 32768
+    },
+    {
+      "value": 0.5,
+      "expected": 49150
+    },
+    {
+      "value": 0.9999,
+      "expected": 65530
+    },
+    {
+      "value": 1,
+      "expected": 65534
+    }
+  ],
+  "trigger": [
+    {
+      "value": 0,
+      "expected": 0
+    },
+    {
+      "value": 0.00196078431372549,
+      "expected": 1
+    },
+    {
+      "value": 0.25,
+      "expected": 64
+    },
+    {
+      "value": 0.5,
+      "expected": 128
+    },
+    {
+      "value": 0.5,
+      "expected": 128
+    },
+    {
+      "value": 0.9999,
+      "expected": 255
+    },
+    {
+      "value": 1,
+      "expected": 255
+    }
+  ]
+}

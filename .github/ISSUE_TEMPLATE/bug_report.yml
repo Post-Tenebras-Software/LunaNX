@@ -1,0 +1,30 @@
+name: Bug report
+description: Report a reproducible LunaNX issue. Keep Amazon credentials private.
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach saved login files, SDP, HAR exports, tokens or complete authenticated requests."
+  - type: input
+    id: version
+    attributes:
+      label: LunaNX version
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Switch environment
+      description: "Switch model, firmware/CFW, full application or applet mode, handheld/docked, decoder and video/bitrate settings."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps and expected/actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: "Fixed stage/status lines or overlay numbers only; omit account and session identifiers."

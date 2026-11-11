@@ -1,0 +1,37 @@
+# Maintainer:  Dave Murphy <davem@devkitpro.org>
+# Contributor: carstene1ns <arch carsten-teibes de> - http://git.io/ctPKG
+# Contributor: Aaron Lindsay <aaron@aaronlindsay.com>
+
+pkgname=switch-libpng
+pkgver=1.6.48
+pkgrel=1
+pkgdesc='PNG format graphic files library'
+arch=('any')
+url='http://www.libpng.org'
+license=('custom')
+options=(!strip libtool staticlibs)
+depends=('switch-zlib')
+groups=('switch-portlibs')
+makedepends=('switch-pkg-config' 'dkp-toolchain-vars')
+source=("https://download.sourceforge.net/libpng/libpng-$pkgver.tar.xz")
+
+build() {
+  cd libpng-$pkgver
+
+  source /opt/devkitpro/switchvars.sh
+
+  ./configure --prefix="$DEVKITPRO/portlibs/switch" --host=aarch64-none-elf \
+    --disable-tools --disable-shared --enable-static
+}
+
+package() {
+  cd libpng-$pkgver
+
+  make LN_S=cp DESTDIR="$pkgdir" install
+  # license
+  install -Dm644 LICENSE "$pkgdir"/opt/devkitpro/portlibs/switch/licenses/$pkgname/LICENSE
+  # remove useless stuff
+  rm -r "$pkgdir"/opt/devkitpro/portlibs/switch/share
+}
+
+sha256sums=('46fd06ff37db1db64c0dc288d78a3f5efd23ad9ac41561193f983e20937ece03')

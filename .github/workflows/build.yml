@@ -1,0 +1,43 @@
+name: Production build
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  switch:
+    runs-on: ubuntu-24.04
+    container: devkitpro/devkita64:latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install Switch libraries
+        run: dkp-pacman -Syu --noconfirm --needed switch-cmake switch-curl switch-ffmpeg switch-freetype
+      - name: Build production NRO
+        run: bash tools/release/build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LunaNX-production-build
+          path: |
+            build-release/LunaNX.nro
+            build-release/LunaNX.nacp
+            build-release/LunaNX.elf
+            build-release/LunaNX.map
+            LICENSE
+            COPYRIGHT
+            THIRD_PARTY_NOTICES.md
+            README.md
+          if-no-files-found: error
+  offline-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install test tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential pkg-config cmake python3 nodejs libfreetype-dev libpng-dev ffmpeg libavcodec-dev libavutil-dev libswscale-dev libavformat-dev libswresample-dev
+      - name: Offline regression suites
+        run: python3 tools/release/check.py --tests-only

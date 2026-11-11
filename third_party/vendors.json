@@ -1,0 +1,60 @@
+[
+  {
+    "path": "external/libdatachannel",
+    "base_revision": "bdc5ff28e9d3b863144c94a677ecf5bf043aaf15",
+    "modified_files": [
+      "deps/libjuice",
+      "deps/libsrtp",
+      "deps/usrsctp",
+      "src/impl/init.cpp",
+      "src/impl/sctptransport.cpp",
+      "src/impl/socket.hpp"
+    ],
+    "omitted_unbuilt_assets": [
+      "examples/streamer/samples/candle.mov (unused 43 MB example media; NO_EXAMPLES=ON)"
+    ]
+  },
+  {
+    "path": "external/mbedtls",
+    "base_revision": "068ff080b369adfac81509f9b57b2afabaf82dc5",
+    "modified_files": []
+  },
+  {
+    "path": "external/libdatachannel/deps/libjuice",
+    "base_revision": "b89c792e3612faf2f12cf35bcc56857313a06be3",
+    "modified_files": [
+      "src/conn_poll.c",
+      "src/random.c",
+      "src/socket.h",
+      "src/udp.c"
+    ]
+  },
+  {
+    "path": "external/libdatachannel/deps/usrsctp",
+    "base_revision": "fec583d54493f879d2ae44a743423bf8a04371ab",
+    "modified_files": [
+      "CMakeLists.txt",
+      "usrsctplib/netinet/sctp_os_userspace.h",
+      "usrsctplib/user_environment.c",
+      "usrsctplib/user_socketvar.h",
+      "usrsctplib/usrsctp.h"
+    ]
+  },
+  {
+    "path": "external/libdatachannel/deps/libsrtp",
+    "base_revision": "d33b8ffb1491a0b4b58a206889f09800cf7310ab",
+    "modified_files": [
+      "crypto/include/datatypes.h"
+    ]
+  },
+  {
+    "path": "external/libdatachannel/deps/json",
+    "base_revision": "55f93686c01528224f448c19128836e7df245f72",
+    "modified_files": []
+  },
+  {
+    "path": "external/libdatachannel/deps/plog",
+    "base_revision": "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef",
+    "modified_files": []
+  }
+]

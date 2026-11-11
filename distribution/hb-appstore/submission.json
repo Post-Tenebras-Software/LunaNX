@@ -1,0 +1,18 @@
+{
+  "console": "switch",
+  "title": "LunaNX",
+  "author": "PostTenebrasSoftware",
+  "category": "tool",
+  "contact": "posttenebrassoftware@proton.me",
+  "version": "1.0.1",
+  "license": "GPLv3",
+  "url": "https://github.com/Post-Tenebras-Software/LunaNX",
+  "short": "Amazon Luna streaming on Switch",
+  "long": "Unofficial native Amazon Luna client for Nintendo Switch homebrew. Sign in with Amazon's device code, select a profile, browse your games and stream with NVDEC hardware video, sound and controller input. Includes remembered sign-in, search, game pages, screenshots/trailers, Recently Played, bitrate/video settings and a live statistics overlay. Return Home, reconnect or explicitly end a game; switching games asks first. Requires full application memory/title takeover, internet and your own eligible Luna account/game access. No PC companion, games or subscription are included. Handheld 720p60 is hardware-tested; docked 1080p is untested. Not affiliated with Amazon or Nintendo. Original code is GPL-3.0-or-later; matching source and dependency notices accompany the release.",
+  "changelog": "Production 1.0.1: native client identity, game EULA confirmation, persistent Recently Played, Return to game, explicit End Game and confirmed game switching.",
+  "ai": "mostly",
+  "aiparts": ["art", "text"],
+  "icon": "assets/branding/store-icon.png",
+  "banner": "assets/branding/banner.png",
+  "status": "Prepared locally; not submitted or approved"
+}

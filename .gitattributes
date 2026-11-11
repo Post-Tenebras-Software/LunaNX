@@ -1,0 +1,14 @@
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.png binary
+*.jpg binary
+*.ttf binary
+*.gz binary
+*.xz binary
+*.bin binary
+# Preserve upstream fixtures and source archives byte-for-byte in Git clones.
+external/** -text
+third_party/** -text

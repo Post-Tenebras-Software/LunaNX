@@ -1,0 +1,38 @@
+[
+  {
+    "version": "1.0.1-id2",
+    "nro_sha256": "f6ef62ed223e712cfc938dfff16dab0c62141247d1cfa4cda61a21b12ec5ad7b",
+    "reported_date": "2026-11-10",
+    "source": "User reports everything is working correctly after the session-controls test build; corroborated by saved nxlink diagnostics.",
+    "result": "Session controls accepted by user. Log shows three acknowledged terminations (HTTP 200, no API error, remoteMayRemain=0), an acknowledged end followed by a fresh replacement launch, three Ready sessions and identity-ready flags.",
+    "scope": [
+      "User acceptance of Home Return to game / separate End Game / confirmed game switching",
+      "Remote termination acknowledgments",
+      "Confirmed old-session termination precedes replacement launch",
+      "Client identity ready in the tested build"
+    ],
+    "unverified": [
+      "Individual cancellation paths were not separately described by the user; covered by offline checks",
+      "Return-to-game path not independently identified in this saved log",
+      "Tracking sessions from previous app runs or other clients",
+      "Docked 1080p"
+    ],
+    "follow_up": "Retain this tested binary as the current session-controls checkpoint; production promotion remains a separate step."
+  },
+  {
+    "version": "1.0.1",
+    "nro_sha256": "8a56ba40e9ed6a475da5d44c4e4915c8a5fe8d1d21e62ca5db7a57c6c959701f",
+    "reported_date": "2026-11-10",
+    "source": "Author response to standalone production smoke-test request: everything working; Recently Played artwork differs from Catalog.",
+    "result": "Production runtime accepted. Catalog-cover correction implemented afterward and not included in this tested hash.",
+    "scope": [
+      "Standalone production export, icon and version",
+      "Author acceptance of playback and session controls"
+    ],
+    "unverified": [
+      "Final catalog-cover correction",
+      "Store installation",
+      "Docked 1080p"
+    ]
+  }
+]
