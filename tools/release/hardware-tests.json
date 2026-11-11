@@ -34,5 +34,20 @@
       "Store installation",
       "Docked 1080p"
     ]
+  },
+  {
+    "version": "1.0.1",
+    "nro_sha256": "6f5099658aa4f325ac9515b5735f970d49a39cea20aab541656d7de92d0714f5",
+    "reported_date": "2026-11-10",
+    "source": "Author tested the corrected standalone production NRO and confirmed matching Recently Played artwork: yep its good.",
+    "result": "Catalog-cover correction accepted on Switch following the production runtime smoke test.",
+    "scope": [
+      "Recently Played matches loaded Home/Catalog artwork",
+      "Final production NRO launches on Switch"
+    ],
+    "unverified": [
+      "Store installation",
+      "Docked 1080p"
+    ]
   }
 ]

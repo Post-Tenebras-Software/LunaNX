@@ -140,8 +140,8 @@ artwork loads from Luna for your signed-in profile.*
 Handheld 720p60 gameplay with audio/input, remembered login, profile changes,
 game pages/trailers and session controls were tested on a physical Switch during
 development. The standalone production build also passed the author's smoke
-test. The subsequent catalog-cover correction awaits a visual device check;
-store installation and docked 1080p remain unverified. See
+test, including the catalog-cover correction. Store installation and docked
+1080p remain unverified. See
 [validation](docs/VALIDATION.md) for the exact tested builds.
 
 | Problem | What to check |

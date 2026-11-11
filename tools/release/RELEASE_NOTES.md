@@ -49,8 +49,8 @@ ZR opens screenshots. Plus exits from the launcher.
 
 The standalone production runtime was accepted on a real Switch. Handheld
 720p60 video, audio/input, sign-in, profiles, descriptions, trailers and history
-were tested during development. The final catalog-cover correction has offline
-coverage and awaits device confirmation; store installation is also unverified.
+were tested during development. The final catalog-cover correction passed
+offline checks and was confirmed on Switch. Store installation is unverified.
 See `docs/VALIDATION.md`. **Docked 1080p remains untested.**
 
 Publisher-account linking, PIN/parental-control editing, child/teen management,

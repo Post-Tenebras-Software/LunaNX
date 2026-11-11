@@ -23,7 +23,9 @@ and reported everything working, with different artwork in Recently Played.
 The subsequent correction preserves catalog covers rather than replacing them
 with game-page backgrounds and repairs existing entries when matching catalog
 tiles load. Offline tests cover persistent repairs, unchanged play order and
-profile isolation. That final artwork correction awaits device confirmation.
+profile isolation. The author then confirmed the correction on Switch in the
+final production NRO, SHA256
+`6f5099658aa4f325ac9515b5735f970d49a39cea20aab541656d7de92d0714f5`.
 
 **Not yet independently verified:** installation through HB App Store/Sphaira,
 and docked 1080p. The individual confirmation-cancel paths have
