@@ -25,6 +25,13 @@ if not (ffmpeg_root / 'libavformat/libavformat.a').is_file():
                        cwd=ffmpeg_root, stdout=log, stderr=subprocess.STDOUT, check=True)
 with tempfile.TemporaryDirectory(prefix='lunanx-trailer-test-') as directory:
     d = Path(directory)
+    # HTTP is simulated by player.cpp. Use the matching bundled public curl
+    # headers, rather than leaking the Switch SDK into a host-only test.
+    with tarfile.open(ROOT / 'third_party/distfiles/switch-curl/curl-7.69.1.tar.xz') as archive:
+        headers = [m for m in archive.getmembers() if m.isfile() and
+                   m.name.startswith('curl-7.69.1/include/curl/') and m.name.endswith('.h')]
+        archive.extractall(d, members=headers, filter='data')
+    curl_headers = d / 'curl-7.69.1/include'
     common = ['ffmpeg', '-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i', 'testsrc2=size=160x90:rate=30:duration=1']
     subprocess.run([*common, '-f', 'lavfi', '-i', 'sine=frequency=440:sample_rate=44100:duration=1',
                     '-c:v', 'libx264', '-bf', '2', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-movflags', '+faststart',
@@ -40,7 +47,7 @@ with tempfile.TemporaryDirectory(prefix='lunanx-trailer-test-') as directory:
     subprocess.run([str(d / 'decoder'), str(d / 'av.mp4'), str(d / 'silent.mp4'), str(d / 'unsupported.mp4')], check=True)
     subprocess.run([os.environ.get('CXX', 'g++'), '-std=c++17', '-Wall', '-Wextra', '-Werror', '-pedantic',
                     '-Isource', '-Itests/trailers/stubs', '-isystem', str(ffmpeg_root),
-                    '-isystem', '/opt/devkitpro/portlibs/switch/include',
+                    '-isystem', str(curl_headers),
                     'source/trailer_decoder.cpp', 'source/launcher_trailer.cpp', 'tests/trailers/player.cpp',
                     '-o', str(d / 'player'), '-Wl,--start-group', *libs, '-Wl,--end-group', '-pthread', '-lm'], cwd=ROOT, check=True)
     subprocess.run([str(d / 'player'), str(d / 'av.mp4')], check=True)

@@ -35,7 +35,10 @@ setup and set `DEVKITPRO` as appropriate. The build script also accepts
 ## Offline tests
 
 Tests use synthetic data and never authenticate to Amazon. Install a host C++17
-compiler, Node.js, pkg-config, FreeType/PNG development libraries and FFmpeg.
+compiler, Git, Node.js, pkg-config, FreeType/PNG development libraries and FFmpeg.
+The host tests do not require devkitPro: the hardware decoder mock configures
+the bundled FFmpeg sources with their Switch patch for matching headers, while
+the trailer HTTP mock uses public headers from the bundled curl archive.
 Trailer/decoder tests can build the included FFmpeg source in a test-only
 directory if compatible host development libraries are unavailable.
 

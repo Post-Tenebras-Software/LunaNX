@@ -48,6 +48,10 @@ def run_tests():
     with ThreadPoolExecutor(max_workers=3) as pool:
         records = list(pool.map(run, TESTS))
     (AUDIT / 'tests.json').write_text(json.dumps(records, indent=2) + '\n')
+    for record in records:
+        if record['exit_code'] != 0:
+            print('Failed suite output: ' + ' '.join(record['command']), flush=True)
+            print((AUDIT / record['log']).read_text(), flush=True)
     require(all(r['exit_code'] == 0 for r in records), 'Regression failure; inspect release-audit logs')
 
 
