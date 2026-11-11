@@ -4,8 +4,7 @@
 
 **Amazon Luna streaming on Nintendo Switch homebrew.** LunaNX is an unofficial,
 native client by **PostTenebrasSoftware**, with a controller-friendly launcher,
-remembered sign-in, hardware video decoding, sound and gamepad input. No PC
-companion is required.
+remembered sign-in, hardware video decoding, sound and gamepad input.
 
 **Production release: v1.0.1.**
 [Download](https://github.com/Post-Tenebras-Software/LunaNX/releases/latest) ·
@@ -127,7 +126,6 @@ clocks; external clock tools operate independently.
 - Cached artwork, game pages, descriptions, screenshots and manual trailers.
 - Native Amazon sign-in, encrypted sign-in memory and access-token refresh.
 - Adult profile creation and name/avatar editing.
-- Game terms confirmation, queue progress, loading screen and session controls.
 - H.264/NVDEC video, Opus sound and controller forwarding.
 
 ![LunaNX launcher with Return to game and End Game above Recently Played](docs/images/launcher-preview.png)
@@ -140,7 +138,7 @@ artwork loads from Luna for your signed-in profile.*
 Handheld 720p60 gameplay with audio/input, remembered login, profile changes,
 game pages/trailers and session controls were tested on a physical Switch during
 development. The standalone production build also passed the author's smoke
-test, including the catalog-cover correction. Store installation and docked
+test. Store installation and docked
 1080p remain unverified. See
 [validation](docs/VALIDATION.md) for the exact tested builds.
 
