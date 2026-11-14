@@ -2,7 +2,7 @@
 
 # LunaNX
 
-**Disclamer: this app is mostly vibecoded and started as a personal project experimenting with Code**
+**Disclaimer: this app is mostly vibecoded and started as a personal project experimenting with Codex**
 
 **Amazon Luna streaming on Nintendo Switch homebrew.** LunaNX is an unofficial,
 native client by **PostTenebrasSoftware**, with a controller-friendly launcher,
